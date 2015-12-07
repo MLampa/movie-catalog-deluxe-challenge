@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+  </head>
+
+  <body>
+    <h1>Actors</h1>
+    <h5><a href="/movies">Go to Movies</a></h5>
+<ul>
+    <% @actors.each do |actor|%>
+
+      <li>
+          <ul>
+            <li><a href="/actors/<%= actor["actor_id"]%>"><%= actor["name"]%></a></li>
+
+
+          </ul>
+      </li>
+    <%end%>
+</ul>
+
+    </form>
+  </body>
+</html>

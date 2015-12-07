@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+  </head>
+
+  <body>
+    <h1>Movies</h1>
+
+<ul>
+    <% @movies.each do |info|%>
+
+      <li><a href="/movies/<%= info["movie_id"]%>"><%= info["title"]%></a> (<%= info["studio"] %> <%= info["year"] %>) rating: <%= info["rating"] %> genre: <%= info["genre"] %></li>
+
+    <%end%>
+</ul>
+
+    </form>
+  </body>
+</html>
